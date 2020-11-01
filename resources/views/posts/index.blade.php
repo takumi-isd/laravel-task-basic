@@ -30,5 +30,3 @@
 </div>
 
 @endsection('content')
-
-
