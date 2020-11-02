@@ -20,7 +20,7 @@ class PostsController extends Controller
     
     public function store(Request $request)
     {
-        $params = $ruquest->validate([
+         $params = $request->validate([
             'title' => 'required|max:20',
             'body' => 'required|max:140',
             ]);
@@ -28,6 +28,7 @@ class PostsController extends Controller
         Post::create($params);
         
         return redirect()->route('top');
+        
     }
     
 } 
